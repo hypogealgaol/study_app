@@ -1,14 +1,15 @@
 <template name="login">
-	<div id="login">
-		<form id="login-form" >
-			<input id="login-user" type="text" placeholder="Email" autocomplete="off"/>
-			<input id="login-pass" type="password" placeholder="Password"/>
-			<div id="login-enter">Enter</div>
+	<section id="login">
+		<h1 id="login-header">Login</h1>
+		<form id="login-form">
+			<input class="login-info" id="login-user" type="text" placeholder="me@columbia.edu" autocomplete="off"/>
+			<input class="login-info" id="login-pass" type="password" placeholder="password"/>
+			<button type="submit" id="login-enter">Enter</button>
 		</form>
-		<div id="login-footer">
-			<div class="login-footer-link" style="margin:initial">Legal</div>
-			<div class="login-footer-link">Help</div>
-			<div class="login-footer-link">Sign Up</div>
-		</div>
-	</div>
+		<footer id="login-footer">
+			<a class="login-footer-link">Legal</a>
+			<a class="login-footer-link">Help</a>
+			<a class="login-footer-link">Sign Up</a>
+		</footer>
+	</section>
 </template>
