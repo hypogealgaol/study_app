@@ -135,14 +135,5 @@ a {
     display: flex;
     align-items: center;
     margin-top: 24px;
-
-    .login-footer-link {
-      margin-right: 24px;
-
-      &:last-of-type {
-        margin-right: 0;
-      }
-    }
   }
-
 }
