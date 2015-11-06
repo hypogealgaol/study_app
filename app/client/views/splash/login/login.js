@@ -1,9 +1,10 @@
 Template.login.events({
-	'submit form#login-form, click #login-enter': function(event) {
+	'submit form#login-form': function(event) {
 		event.preventDefault();
-		var user = $('#login-user').val();
+		var email = $('#login-email').val();
 		var pass = $('#login-pass').val();
-		Meteor.loginWithPassword(user, pass, function(err) {
+		console.log('login submitted'); 
+		Meteor.loginWithPassword(email, pass, function(err) {
 			if (err) console.log(err); //login attempt failed
 			else {
 				Router.go('/');
