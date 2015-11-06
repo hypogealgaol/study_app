@@ -6,10 +6,6 @@ Router.configure({
 	},
 });
 
-Router.route('/', function() {
-	this.redirect('/home');
-});
-
 Router.onBeforeAction(function () {
 	//
 	if (!Meteor.userId()) {
@@ -27,6 +23,11 @@ Router.onBeforeAction(function () {
 {
 	except: ['login', 'signup']
 });
+
+Router.route('/', function() {
+	this.redirect('/home');
+});
+
 
 Router.route('/login', {
 	name: 'login',
