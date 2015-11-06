@@ -15,7 +15,7 @@ Router.onBeforeAction(function () {
 	if (!Meteor.userId()) {
 		//ceck to make sure logged in
 		this.redirect('/login');
-	} 
+	}
 	else if (Meteor.user() && Meteor.user().username && Meteor.user().username === 'default') {
 		this.redirect('/settings');
 		this.next();
@@ -23,9 +23,9 @@ Router.onBeforeAction(function () {
 	else {
 		this.next();
 	}
-}, 
+},
 {
-	except: ['login']
+	except: ['login', 'signup']
 });
 
 Router.route('/login', {
@@ -37,16 +37,13 @@ Router.route('/login', {
 			Session.set('status', "");
 			this.redirect('/');
 		}
-		this.layout('splashLayout');
 		this.render('login')
 	}
 });
 
 Router.route('/signup', {
 	name: 'signup',
-	action: function() {
-		//create a user
-		this.redirect('/'); // after done
+	action: function () {
+		this.render('signup');
 	}
-
-})
+});
