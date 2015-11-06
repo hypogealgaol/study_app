@@ -18,6 +18,8 @@ Template.signup.events({
 					if (err) {
 						// signup failed
 						console.error(err);
+					} else {
+						Router.go('/');
 					}
 				}
 			);
