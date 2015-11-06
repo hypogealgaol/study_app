@@ -8,7 +8,7 @@ Template.signup.events({
 		var passConf = form.passconf.value;
 
 		if (passConf === pass) {
-			var userId = Accounts.createUser(
+			Accounts.createUser(
 				{
 					username: email,
 					mail: email,
@@ -21,7 +21,6 @@ Template.signup.events({
 					}
 				}
 			);
-			Accounts.sendVerificationEmail(userId);
 		} else {
 			console.error('Password and password confirmation do not match.');
 			form.pass.value = '';
