@@ -7,19 +7,15 @@ Router.configure({
 	},
 });
 
+Router.route('/', function() {
+	this.redirect('/home');
+});
 
 Router.onBeforeAction(function () {
 	//
 	if (!Meteor.userId()) {
 		//ceck to make sure logged in
-		if (Router.current().route.path() === '/login-legal'){ // allow logged out users to see the legal page
-			this.redirect('/login-legal');
-			this.next();
-		}
-		else {
-			this.redirect('/login');
-		}
-
+		this.redirect('/login');
 	} 
 	else if (Meteor.user() && Meteor.user().username && Meteor.user().username === 'default') {
 		this.redirect('/settings');
