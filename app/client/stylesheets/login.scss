@@ -24,6 +24,7 @@ body {
 
 a {
   color: darken($white, 30%);
+  text-decoration: none;
   @include ease(30ms);
 
   &:hover {
