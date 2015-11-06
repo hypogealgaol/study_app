@@ -2,8 +2,16 @@
 	<section id="login">
 		<h1 id="login-header">Login</h1>
 		<form id="login-form">
-			<input class="login-info" id="login-user" type="text" placeholder="me@columbia.edu" autocomplete="off"/>
-			<input class="login-info" id="login-pass" type="password" placeholder="password"/>
+			<section id="login-info">
+				<section id="login-labels">
+					<label>Email</label>
+					<label>Password</label>
+				</section>
+				<section id="login-inputs">
+					<input type="text" placeholder="me@columbia.edu" />
+					<input type="password" placeholder="••••••••" />
+				</section>
+			</section>
 			<button type="submit" id="login-enter">Enter</button>
 		</form>
 		<footer id="login-footer">
