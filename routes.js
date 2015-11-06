@@ -1,22 +1,10 @@
-Router.route('/', function () {
-  this.render('login');
-});
 
 Router.configure({
 	fastRender: true,
 	notFoundTemplate: 'notFound',
 	onBeforeAction: function() {
-		Tooltips.hide(); // hide current tooltips
 		this.next();
 	},
-	// subscriptions: function() {
-	// 	if (Meteor.userId()) {
-	// 		return [
-	// 			// Meteor.subscribe('cards'),
-	// 			//Meteor.subscribe('statuses')
-	// 		]
-	// 	}
-	// }
 });
 
 
@@ -58,3 +46,12 @@ Router.route('/login', {
 		this.render('login')
 	}
 });
+
+Router.route('/signup', {
+	name: 'signup',
+	action: function() {
+		//create a user
+		this.redirect('/'); // after done
+	}
+
+})
