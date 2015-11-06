@@ -1,7 +1,6 @@
 
 Router.configure({
 	fastRender: true,
-	notFoundTemplate: 'notFound',
 	onBeforeAction: function() {
 		this.next();
 	},
