@@ -37,7 +37,6 @@ Router.route('/login', {
 			Session.set('status', "");
 			this.redirect('/');
 		}
-		this.layout('splashLayout');
 		this.render('login')
 	}
 });
