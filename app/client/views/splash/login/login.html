@@ -1,18 +1,18 @@
 <template name="login">
-	<section id="login">
-		<h1 id="login-header">Login</h1>
-		<form id="login-form">
-			<section id="login-info">
-				<section id="login-labels">
-					<label>Email</label>
-					<label>Password</label>
-				</section>
-				<section id="login-inputs">
-					<input type="text" placeholder="me@columbia.edu" />
-					<input type="password" placeholder="••••••••" />
-				</section>
-			</section>
-			<button type="submit" id="login-enter">Enter</button>
+	<section class="login fancy-form">
+		<h1 class="fancy-form__header">Login</h1>
+		<form id="login-form" class="fancy-form__form">
+			<div class="fancy-form__info">
+				<div class="fancy-form__labels-container">
+					<label for="login-email" class="fancy-form__label">Email</label>
+					<label for="login-password" class="fancy-form__label">Password</label>
+				</div>
+				<div class="fancy-form__inputs-container">
+					<input id="login-email" class="fancy-form__input" name="email" type="text" placeholder="me@columbia.edu">
+					<input id="login-pass" class="fancy-form__input" name="password" type="password" placeholder="••••••••">
+				</div>
+			</div>
+			<button class="fancy-form__submit-button" type="submit">Enter</button>
 		</form>
 	</section>
 </template>

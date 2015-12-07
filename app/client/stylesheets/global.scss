@@ -1,0 +1,33 @@
+@import "variables";
+@import "mixins";
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#4E0469, #800046);
+  color: $white;
+  font-size: 300;
+}
+
+* {
+  font-family: 'Open Sans';
+  box-sizing: border-box;
+}
+
+a {
+  color: darken($white, 30%);
+  text-decoration: none;
+  @include ease(30ms);
+
+  &:hover {
+    color: darken($white, 10%);
+  }
+
+  &:active {
+    color: darken($white, 50%);
+  }
+}

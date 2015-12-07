@@ -1,0 +1,3 @@
+@mixin ease($time) {
+  transition: $time all ease;
+}
