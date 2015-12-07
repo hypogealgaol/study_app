@@ -1,30 +1,25 @@
 <template name="signup">
-	<div id="signup">
-		<form id="signup-form" method="post" action="">
-			<div>
-				<label>
-					Email address
-					<input id="signup-email" name="email" type="text" placeholder="Email" autocomplete="off">
-				</label>
-			</div>
+	<section class="signup fancy-form">
 
-			<div>
-				<label>
-					Password
-					<input id="signup-pass" name="pass" type="password" placeholder="Password">
-				</label>
-			</div>
+		<h1 class="fancy-form__header">Sign up</h1>
 
-			<div>
-				<label>
-					Confirm password
-					<input id="signup-passconf" name="passconf" type="password" placeholder="Confirm password">
-				</label>
-			</div>
+		<form id="signup-form" class="fancy-form__form" action="" method="post">
+			<div class="fancy-form__info">
 
-			<div>
-				<button type="submit">Sign up</button>
+				<div class="fancy-form__labels-container">
+					<label for="signup-email" class="fancy-form__label">Email</label>
+					<label for="signup-pass" class="fancy-form__label">Password</label>
+					<label for="signup-passconf" class="fancy-form__label">Confirm password</label>
+				</div>
+
+				<div class="fancy-form__inputs-container">
+					<input id="signup-email" class="fancy-form__input" name="email" type="text" placeholder="me@columbia.edu">
+					<input id="signup-pass" class="fancy-form__input" name="password" type="password" placeholder="••••••••">
+					<input id="signup-passconf" class="fancy-form__input" name="password-confirmation" type="password" placeholder="••••••••">
+				</div>
+
 			</div>
+			<button class="fancy-form__submit-button" type="submit">Sign up</button>
 		</form>
-	</div>
+	</section>
 </template>

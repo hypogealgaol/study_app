@@ -3,16 +3,16 @@ Template.signup.events({
 		event.preventDefault();
 
 		var form = event.target;
-		var email = form.email.value;
-		var pass = form.pass.value;
-		var passConf = form.passconf.value;
+		var email = form['signup-email'];
+		var pass = form['signup-pass'];
+		var passConf = form['signup-passconf'];
 
-		if (passConf === pass) {
+		if (passConf.value === pass.value) {
 			Accounts.createUser(
 				{
-					username: email,
-					mail: email,
-					password: pass
+					username: email.value,
+					mail: email.value,
+					password: pass.value
 				},
 				function (err) {
 					if (err) {
@@ -25,8 +25,8 @@ Template.signup.events({
 			);
 		} else {
 			console.error('Password and password confirmation do not match.');
-			form.pass.value = '';
-			form.passconf.value = '';
+			pass.value = '';
+			passConf.value = '';
 		}
 	}
 });
